@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Preview Page</title>
+
+    <style>
+        
+        .title{
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        .mainimage {
+            height: 450px;
+            display: block;
+            margin: 0px auto;
+            padding: 10px;
+        }
+
+        .image {
+            height: 70px;
+            border-radius: 10px;
+            border: 0.5px solid gray;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="images">
+        <h1 class="title">Product Preview</h1>
+        <img src="main.jpg" id="mainimage" class="mainimage" />
+        <div class="image-container">
+            <img src="main.jpg" class="image" onclick="changeImage('main.jpg')" />
+            <img src="2.jpg" class="image" onclick="changeImage('2.jpg')" />
+            <img src="3.jpg" class="image" onclick="changeImage('3.jpg')" />
+            <img src="4.jpg" class="image" onclick="changeImage('4.jpg')" />
+            <img src="5.jpg" class="image" onclick="changeImage('5.jpg')" />
+            <img src="6.jpg" class="image" onclick="changeImage('6.jpg')" />
+        </div>
+    </div>
+
+    <script>
+        function changeImage(imageName) {
+            const mainimage = document.getElementById('mainimage');
+            mainimage.src = imageName;
+        }
+    </script>
+
+</body>
+
+</html>
